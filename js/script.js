@@ -48,5 +48,8 @@ createApp({
         this.counter = this.slides.length - 1;
       }
     },
+    pointer: function () {
+      this.counter = index;
+    },
   },
 }).mount("#app");
