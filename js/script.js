@@ -59,6 +59,12 @@ createApp({
         }, 3000);
       }
     },
+    stopAutoPlay() {
+      if (this.interval) {
+        clearInterval(this.interval);
+        this.interval = false;
+      }
+    },
   },
   created() {
     this.autoPlay();
