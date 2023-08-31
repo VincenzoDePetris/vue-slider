@@ -33,6 +33,7 @@
               class="thumb"
               v-for="(image, index) in slides"
               :class="(index == counter) ? 'active' : ''"
+              @click="pointer(index)"
             >
               <img :src="slides[index].image" alt="" />
             </div>

@@ -48,7 +48,7 @@ createApp({
         this.counter = this.slides.length - 1;
       }
     },
-    pointer: function () {
+    pointer: function (index) {
       this.counter = index;
     },
   },
