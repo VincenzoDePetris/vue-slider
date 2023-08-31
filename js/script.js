@@ -31,6 +31,7 @@ createApp({
         },
       ],
       counter: 0,
+      interval: false,
     };
   },
   methods: {
@@ -51,5 +52,15 @@ createApp({
     pointer: function (index) {
       this.counter = index;
     },
+    autoPlay() {
+      if (!this.interval) {
+        this.interval = setInterval(() => {
+          this.goNext();
+        }, 3000);
+      }
+    },
+  },
+  created() {
+    this.autoPlay();
   },
 }).mount("#app");
